@@ -1,16 +1,74 @@
-# React + Vite
+# Mini E-Commerce Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A modern, responsive e-commerce store built with React, Redux Toolkit, and Tailwind CSS. Fetches products from the [FakeStore API](https://fakestoreapi.com) with prices displayed in PKR.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Product listing with category filtering (Electronics, Jewelery, Men's Clothing, Women's Clothing)
+- Add to cart, update quantity, and remove items
+- Slide-in cart drawer with real-time price totals
+- Mock authentication (login/logout)
+- Loading skeletons and error handling with retry
+- Fully responsive design (mobile + desktop)
+- Smooth animations and transitions
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 19** — UI library
+- **Redux Toolkit** — State management (products + cart slices)
+- **Tailwind CSS 4** — Utility-first styling via Vite plugin
+- **Vite 8** — Build tool and dev server
+- **Lucide React** — Icon library
+- **oxlint** — Linting
 
-## Expanding the Oxlint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+src/
+├── components/
+│   ├── CartDrawer.jsx      # Slide-in cart panel
+│   ├── Navbar.jsx           # Header with category filters + auth
+│   ├── ProductCard.jsx      # Individual product display
+│   └── ProductList.jsx      # Grid layout with loading/error states
+├── context/
+│   ├── AuthContext.js        # React context for auth
+│   ├── AuthProvider.jsx      # Auth state provider
+│   └── useAuth.js            # Auth hook
+├── redux/
+│   ├── store.js              # Redux store config
+│   └── slices/
+│       ├── cartSlice.js      # Cart state & reducers
+│       └── productsSlice.js  # Product fetch & filtering
+├── App.jsx                   # Root component
+├── main.jsx                  # Entry point
+└── index.css                 # Tailwind imports
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+
+### Install and Run
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint
+npm run lint
+```
+
+## Pricing
+
+All product prices are fetched in USD from the FakeStore API and converted to **Pakistani Rupees (PKR)** at a fixed rate of **278 PKR/USD**.

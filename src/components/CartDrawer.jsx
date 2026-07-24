@@ -55,7 +55,7 @@ export default function CartDrawer({ isOpen, onClose }) {
                   key={item.id}
                   className="flex gap-4 p-3 bg-gray-50 rounded-xl"
                 >
-                  <div className="w-16 h-16 flex-shrink-0 bg-white rounded-lg border border-gray-100 flex items-center justify-center overflow-hidden">
+                  <div className="w-16 h-16 shrink-0 bg-white rounded-lg border border-gray-100 flex items-center justify-center overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
@@ -67,7 +67,7 @@ export default function CartDrawer({ isOpen, onClose }) {
                       {item.title}
                     </h4>
                     <p className="text-sm text-gray-500 mt-0.5">
-                      ${item.price.toFixed(2)} each
+                      Rs. {item.price.toLocaleString("en-PK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} each
                     </p>
                     <div className="flex items-center gap-2 mt-2">
                       <button
@@ -111,7 +111,7 @@ export default function CartDrawer({ isOpen, onClose }) {
                     </div>
                   </div>
                   <div className="text-sm font-semibold text-gray-900 whitespace-nowrap">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    Rs. {(item.price * item.quantity).toLocaleString("en-PK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </div>
                 </li>
               ))}
@@ -123,12 +123,12 @@ export default function CartDrawer({ isOpen, onClose }) {
           <div className="border-t border-gray-200 px-6 py-4 space-y-3">
             <div className="flex items-center justify-between text-base font-semibold text-gray-900">
               <span>Total</span>
-              <span>${totalPrice.toFixed(2)}</span>
+              <span>Rs. {totalPrice.toLocaleString("en-PK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
             </div>
             <button
               className="w-full py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition-colors active:scale-[0.98]"
             >
-              Checkout &mdash; ${totalPrice.toFixed(2)}
+              Checkout &mdash; Rs. {totalPrice.toLocaleString("en-PK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
             </button>
             <button
               onClick={() => dispatch(clearCart())}

@@ -33,7 +33,7 @@ export default function ProductCard({ product }) {
 
         <div className="mt-auto flex items-center justify-between">
           <span className="text-lg font-bold text-gray-900">
-            ${product.price.toFixed(2)}
+            Rs. {product.price.toLocaleString("en-PK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </span>
           <button
             onClick={() => dispatch(addToCart(product))}
