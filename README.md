@@ -1,6 +1,6 @@
 # Mini E-Commerce Store
 
-A modern, responsive e-commerce store built with React, Redux Toolkit, and Tailwind CSS. Fetches products from the [FakeStore API](https://fakestoreapi.com) with prices displayed in PKR.
+A modern, responsive e-commerce store built with React, Redux Toolkit, and Tailwind CSS. 
 
 ## Features
 
@@ -68,7 +68,3 @@ npm run preview
 # Lint
 npm run lint
 ```
-
-## Pricing
-
-All product prices are fetched in USD from the FakeStore API and converted to **Pakistani Rupees (PKR)** at a fixed rate of **278 PKR/USD**.

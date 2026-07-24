@@ -1,7 +1,7 @@
 import { useState, useCallback } from "react";
 import AuthContext from "./AuthContext";
 
-const MOCK_USER = { name: "Alex Developer", email: "alex@example.com" };
+const MOCK_USER = { name: "Ali Hassan", email: "ali@example.com" };
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
