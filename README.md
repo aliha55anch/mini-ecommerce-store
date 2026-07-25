@@ -2,6 +2,8 @@
 
 A modern, responsive e-commerce store built with React, Redux Toolkit, and Tailwind CSS. 
 
+---
+
 ## Features
 
 - Product listing with category filtering (Electronics, Jewelery, Men's Clothing, Women's Clothing)
@@ -12,6 +14,8 @@ A modern, responsive e-commerce store built with React, Redux Toolkit, and Tailw
 - Fully responsive design (mobile + desktop)
 - Smooth animations and transitions
 
+---
+
 ## Tech Stack
 
 - **React 19** — UI library
@@ -20,6 +24,8 @@ A modern, responsive e-commerce store built with React, Redux Toolkit, and Tailw
 - **Vite 8** — Build tool and dev server
 - **Lucide React** — Icon library
 - **oxlint** — Linting
+
+---
 
 ## Project Structure
 
@@ -43,6 +49,7 @@ src/
 ├── main.jsx                  # Entry point
 └── index.css                 # Tailwind imports
 ```
+---
 
 ## Getting Started
 
@@ -68,3 +75,20 @@ npm run preview
 # Lint
 npm run lint
 ```
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## Developed 👨‍💻 by: 
+
+Muhammad Ali Hassan 
+
+---
+
+## ⭐ Support
+
+If you like this project, consider giving it a star on GitHub ⭐
